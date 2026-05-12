@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes"
+  />
+
+  <title>
+    Shared Navbar Demo - Centered Modal
+  </title>
+
+  <style>
+
+    /* =========================
+       PAGE
+    ========================= */
+
+    body {
+
+      margin: 0;
+
+      padding-top: 110px;
+
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    }
+
+    @media (max-width: 768px) {
+
+      body {
+        padding-top: 90px;
+      }
+
+    }
+
+    /* =========================
+       DEMO CONTENT
+    ========================= */
+
+    .page-content {
+      padding: 24px;
+      color: white;
+    }
+
+    .page-content h1 {
+      margin-top: 0;
+    }
+
+    /* =========================
+       NAVBAR LOGO
+    ========================= */
+
+    .navbar-logo {
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 14px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    /* =========================
+       APP TITLE
+    ========================= */
+
+    .app-title {
+
+      color: white;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .app-title {
+        font-size: 14px;
+      }
+      
+      .navbar-logo {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    /* =========================
+       COLOR DEMO BUTTONS
+    ========================= */
+
+    .demo-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.95);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10000;
+      backdrop-filter: blur(10px);
+    }
+
+    .demo-controls h4 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+    }
+
+    .demo-controls button {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: transform 0.1s;
+    }
+
+    .demo-controls button:active {
+      transform: scale(0.95);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <company-navbar></company-navbar>
+
+  <!-- PAGE CONTENT -->
+
+  <div class="page-content">
+
+    <h1>
+      Shared Navbar System
+    </h1>
+
+    <p>
+      Fully responsive navbar with <strong>centered modal popup</strong> for menu items.
+    </p>
+
+    <p>
+      <strong>Current Theme:</strong> <span id="current-theme">rose</span>
+    </p>
+
+    <br>
+
+    <h3>Features:</h3>
+    <ul>
+      <li>✅ Fully responsive (mobile + tablet + desktop)</li>
+      <li>✅ Custom color support (themes or RGB)</li>
+      <li>✅ <strong>Centered modal popup instead of dropdown</strong></li>
+      <li>✅ Beautiful animations</li>
+      <li>✅ Click outside or ESC to close</li>
+      <li>✅ Ready for future components</li>
+    </ul>
+
+    <br>
+    <p>
+      <strong>Try it:</strong> Click the "More" button (3 dots) to see the centered modal popup!
+    </p>
+
+  </div>
+
+  <!-- COLOR DEMO CONTROLS -->
+
+  <div class="demo-controls">
+    <h4>🎨 Change Color:</h4>
+    <button style="background:#0d6efd; color:white;" onclick="changeTheme('blue')">Blue</button>
+    <button style="background:#a855f7; color:white;" onclick="changeTheme('purple')">Purple</button>
+    <button style="background:#10b981; color:white;" onclick="changeTheme('emerald')">Emerald</button>
+    <button style="background:#f43f5e; color:white;" onclick="changeTheme('rose')">Rose</button>
+    <button style="background:#f97316; color:white;" onclick="changeTheme('orange')">Orange</button>
+    <button style="background:#0f172a; color:white;" onclick="changeTheme('dark')">Dark</button>
+    <button style="background:#dc2626; color:white;" onclick="changeCustomColor('220, 38, 38')">Red</button>
+    <button style="background:#0891b2; color:white;" onclick="changeCustomColor('8, 145, 178')">Cyan</button>
+  </div>
+
+  <!-- NAVBAR CONFIG -->
+
+  <script>
+
+    window.CompanyNavbarConfig = {
+
+      // =========================
+      // THEME (Change this)
+      // =========================
+      
+      theme: "rose",
+      
+      // =========================
+      // NAV SETTINGS
+      // =========================
+
+      maxVisibleItems: 3,  // Only 3 visible, rest in modal
+
+      navbarOpacity: "0.85",
+      blurAmount: "18px",
+
+      // =========================
+      // LEFT COMPONENTS (Logo + Title)
+      // =========================
+
+      leftComponents: [
+
+        `
+        <img
+          src="https://home.minionsenterprises.com/media/mes.png"
+          class="navbar-logo"
+          alt="Logo"
+        />
+        `,
+
+        `
+        <span class="app-title">
+          Acme CRM
+        </span>
+        `
+
+      ],
+
+      // =========================
+      // RIGHT COMPONENTS (Ready for future)
+      // =========================
+
+      rightComponents: [],
+
+      // =========================
+      // LINKS
+      // =========================
+
+      links: [
+
+        {
+          label: "Home",
+          href: "/",
+          icon: "fas fa-home"
+        },
+
+        {
+          label: "Dashboard",
+          href: "/dashboard",
+          icon: "fas fa-chart-line"
+        },
+
+        {
+          label: "Projects",
+          href: "/projects",
+          icon: "fas fa-folder"
+        },
+
+        {
+          label: "Analytics",
+          href: "/analytics",
+          icon: "fas fa-chart-pie"
+        },
+
+        {
+          label: "Settings",
+          href: "/settings",
+          icon: "fas fa-gear"
+        },
+
+        {
+          label: "Users",
+          href: "/users",
+          icon: "fas fa-users"
+        },
+
+        {
+          label: "Reports",
+          href: "/reports",
+          icon: "fas fa-file-alt"
+        },
+
+        {
+          label: "Messages",
+          href: "/messages",
+          icon: "fas fa-envelope"
+        }
+
+      ]
+
+    };
+
+    // Function to dynamically change theme
+    function changeTheme(theme) {
+      window.CompanyNavbarConfig.theme = theme;
+      delete window.CompanyNavbarConfig.navbarColor;
+      document.getElementById('current-theme').textContent = theme;
+      
+      // Reload navbar
+      const navbar = document.querySelector('company-navbar');
+      const newNavbar = document.createElement('company-navbar');
+      navbar.parentNode.replaceChild(newNavbar, navbar);
+    }
+
+    // Function for custom colors
+    function changeCustomColor(rgb) {
+      window.CompanyNavbarConfig.navbarColor = rgb;
+      delete window.CompanyNavbarConfig.theme;
+      document.getElementById('current-theme').textContent = `Custom (${rgb})`;
+      
+      // Reload navbar
+      const navbar = document.querySelector('company-navbar');
+      const newNavbar = document.createElement('company-navbar');
+      navbar.parentNode.replaceChild(newNavbar, navbar);
+    }
+
+  </script>
+
+  <!-- NAVBAR SCRIPT -->
+
+  <script src="./scripts/navbar.js"></script>
+
+</body>
+
+</html>

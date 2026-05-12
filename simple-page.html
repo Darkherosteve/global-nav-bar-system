@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page - Company Navbar</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      color: #333;
+      margin-top: 0;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #667eea;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR COMPONENT -->
+  <company-navbar></company-navbar>
+
+  <!-- PAGE CONTENT -->
+  <div class="container">
+    <div class="card">
+      <span class="badge">Sample Page</span>
+      <h1>Welcome to Your App</h1>
+      <p>This is a demo page showing how the navbar works across all your applications.</p>
+      <p>The navbar above is loaded from a single script. Update it once, and every app gets the update instantly.</p>
+      <hr>
+      <p><strong>Current Features:</strong></p>
+      <ul>
+        <li>Custom colors & themes</li>
+        <li>Responsive design</li>
+        <li>Brand logo & subheading</li>
+        <li>Overflow menu for extra links</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- NAVBAR CONFIGURATION -->
+  <script>
+    window.CompanyNavbarConfig = {
+      // Branding
+      companyName: "MyApp",
+      subheading: "Version 1.0",
+      logo: "https://picsum.photos/42/42?random=1",
+      
+      // Theme
+      theme: "dark",
+      
+      // Links
+      maxVisibleItems: 4,
+      links: [
+        { label: "Home", href: "#", icon: "fas fa-home" },
+        { label: "Features", href: "#", icon: "fas fa-star" },
+        { label: "Pricing", href: "#", icon: "fas fa-tag" },
+        { label: "About", href: "#", icon: "fas fa-info-circle" },
+        { label: "Contact", href: "#", icon: "fas fa-envelope" }
+      ],
+      
+      // Custom components
+      leftComponents: [],
+      rightComponents: []
+    };
+  </script>
+
+  <!-- NAVBAR SCRIPT (Update path to your actual location) -->
+  <script src="./scripts/navbar.js"></script>
+
+</body>
+</html>

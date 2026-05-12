@@ -1,0 +1,9 @@
+Project: navbar 
+Created by Minions Enterprises Solutions Lati System 
+Created on: Tue 05/12/2026 at 11:42:36.83 
+ 
+Project Structure: 
+- api/ - Backend API files 
+- scripts/ - JavaScript files 
+- styles/ - CSS files 
+- data/ - JSON data files and media 
