@@ -132,7 +132,7 @@ class CompanyNavbar extends HTMLElement {
     // LOAD NAVBAR CSS
     // =========================
 
-    const cssPath = `${baseURL.replace("/scripts", "")}/styles/navbar.css`;
+    const cssPath = `${baseURL.replace("/scripts", "")}/styles/main.css`;
 
     if (!document.querySelector(`link[href="${cssPath}"]`)) {
       const cssLink = document.createElement("link");
