@@ -1,20 +1,22 @@
-/* Main CSS for navbar */ 
-/* Minions Enterprises Solutions Lati System */ 
-body { 
-    font-family: 'Segoe UI', Arial, sans-serif; 
-    margin: 0; 
-    padding: 20px; 
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-    color: white; 
-} 
-.container { 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-} 
-.card { 
-    background: rgba(255,255,255,0.1); 
-    border-radius: 10px; 
-    padding: 20px; 
-    margin: 10px 0; 
-} 
+/**
+ * MAIN STYLESHEET
+ * Production Ready Navbar System
+ * Version: 1.0.0
+ * Author: Development Team
+ * Description: Main entry point for navbar styles
+ */
+
+/* Import all navbar modules */
+@import 'variables.css';
+@import 'animations.css';
+@import 'navbar-base.css';
+@import 'navbar-sections.css';
+@import 'navbar-buttons.css';
+@import 'navbar-responsive.css';
+@import 'navbar-modal.css';
+@import 'utilities.css';
+
+/* Note: All styles are modularized for better maintenance
+ * and production optimization. Each file serves a specific
+ * purpose and can be modified independently.
+ */

@@ -1,0 +1,15 @@
+{
+  "name": "navbar-component",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "minify": "terser scripts/main.js -o scripts/main.min.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "rollup": "^4.0.0",
+    "terser": "^5.0.0"
+  }
+}
