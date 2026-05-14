@@ -1,5 +1,5 @@
-/* LEFT SECTION */
 
+/* Left section - stays on left */
 .company-navbar .left-section {
   display: flex;
   align-items: center;
@@ -8,12 +8,11 @@
   min-width: auto;
 }
 
-/* NAV LINKS WRAPPER */
-
+/* Center/Right section for nav links - pushed to right */
 .company-navbar .nav-links-wrapper {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* This pushes everything to the right */
   min-width: 0;
   overflow-x: auto;
   overflow-y: visible;
@@ -32,8 +31,7 @@
   min-width: 0;
 }
 
-/* RIGHT SECTION */
-
+/* Right section - stays on right */
 .company-navbar .right-section {
   display: flex;
   align-items: center;

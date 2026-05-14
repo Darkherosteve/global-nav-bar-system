@@ -1,0 +1,58 @@
+.company-navbar.compact .nav-label {
+    display: none;
+}
+
+.company-navbar.compact .nav-links a,
+.company-navbar.compact .more-button {
+    padding: 0;
+    width: 48px;
+}
+
+@media (max-width: 768px) {
+    .company-navbar {
+        width: calc(100% - 16px);
+        top: 10px;
+        padding: 0 12px;
+        min-height: 56px;
+        border-radius: 20px;
+    }
+
+    .company-navbar .left-section {
+        gap: 8px;
+    }
+
+    .company-navbar .right-section {
+        gap: 8px;
+    }
+
+    .company-navbar .nav-links a,
+    .company-navbar .more-button {
+        min-height: 40px;
+        min-width: 40px;
+        padding: 0 12px;
+    }
+
+    .company-navbar .nav-links a i,
+    .company-navbar .more-button i {
+        font-size: 16px;
+    }
+
+    .company-navbar.mobile .nav-label {
+        display: none;
+    }
+
+    .company-navbar.mobile .nav-links a,
+    .company-navbar.mobile .more-button {
+        padding: 0;
+        width: 44px;
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .company-navbar .nav-links a,
+    .company-navbar .more-button {
+        padding: 0 12px;
+    }
+}

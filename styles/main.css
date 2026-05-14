@@ -1,18 +1,16 @@
 /* MAIN CSS FILE */
 
 /* Base */
-@import url("./base/reset.css");
-@import url("./base/animations.css");
+@import url("/styles/animations.css");
+@import url("/styles/reset.css");
 
 /* Layout */
-@import url("./layout/navbar.css");
-@import url("./layout/sections.css");
+@import url("/styles/navbar.css");
+@import url("/styles/sections.css");
 
 /* Components */
-@import url("./components/nav-buttons.css");
-@import url("./components/modal.css");
-@import url("./components/brand.css");
+@import url("/styles/nav-buttons.css");
+@import url("/styles/modal.css");
 
 /* Responsive */
-@import url("./responsive/mobile.css");
-@import url("./responsive/tablet.css");
+@import url("/styles/resoponsivene.css");

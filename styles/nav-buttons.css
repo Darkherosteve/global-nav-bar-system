@@ -1,3 +1,4 @@
+
 .company-navbar .nav-links a,
 .company-navbar .more-button {
   position: relative;
@@ -31,4 +32,23 @@
 .company-navbar .nav-links a:active,
 .company-navbar .more-button:active {
   transform: scale(0.96);
+}
+
+.company-navbar .nav-links i,
+.company-navbar .more-button i {
+  font-size: 18px;
+}
+
+.company-navbar .nav-label {
+  display: inline;
+  font-size: 14px;
+}
+
+/* =========================
+   MORE BUTTON & MODAL
+========================= */
+
+.company-navbar .more-button {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
 }
