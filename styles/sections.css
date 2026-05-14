@@ -1,0 +1,44 @@
+/* LEFT SECTION */
+
+.company-navbar .left-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  min-width: auto;
+}
+
+/* NAV LINKS WRAPPER */
+
+.company-navbar .nav-links-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.company-navbar .nav-links-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.company-navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* RIGHT SECTION */
+
+.company-navbar .right-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  min-width: auto;
+}

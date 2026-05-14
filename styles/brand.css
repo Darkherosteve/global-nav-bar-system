@@ -1,0 +1,11 @@
+.company-navbar .brand-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.company-navbar .brand-logo {
+  width: 42px;
+  height: 42px;
+}
