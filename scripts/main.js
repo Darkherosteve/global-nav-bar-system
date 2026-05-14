@@ -13,6 +13,7 @@ import { enableProtection } from './features/protection.js';
 import { setupModal } from './features/modal.js';
 import { setupResponsiveMode } from './features/responsive.js';
 
+
 class CompanyNavbar extends HTMLElement {
 
   connectedCallback() {
